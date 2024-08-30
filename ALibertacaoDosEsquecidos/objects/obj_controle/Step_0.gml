@@ -6,7 +6,8 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
     {
         // Se estiver pausando, desativa todos os objetos móveis do jogo
         instance_deactivate_all(true); 
-        instance_activate_object(obj_pause); // Deixa o controle ativo para detectar a saída da pausa
+        instance_activate_object(obj_controle); // Deixa o controle ativo para detectar a saída da pausa
+		instance_create_layer(160, 60, "GUI", obj_menu_pause);
     }
     else
     {
