@@ -1,2 +1,2 @@
-draw_sprite(spr_menu_pause, 0, 160, 60);
+draw_sprite(spr_menu_pause, 0, x, y);
 
