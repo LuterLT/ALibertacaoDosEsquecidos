@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_menu_pause",
+  "name": "obj_botao_sair",
   "spriteId": {
-    "name": "spr_menu_pause",
-    "path": "sprites/spr_menu_pause/spr_menu_pause.yy",
+    "name": "spr_botao_sair",
+    "path": "sprites/spr_botao_sair/spr_botao_sair.yy",
   },
   "solid": false,
   "visible": true,

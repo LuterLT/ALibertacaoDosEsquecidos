@@ -5,17 +5,28 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
     
     if(global.pause) 
     {	
-		var x_isaac = obj_isaac.x;
-		var y_isaac = obj_isaac.y;
+		global.x_isaac = obj_isaac.x;
+		global.y_isaac = obj_isaac.y;
         // Se estiver pausando, desativa todos os objetos móveis do jogo
         instance_deactivate_all(true); 
         instance_activate_object(obj_controle); // Deixa o controle ativo para detectar a saída da pausa
-		instance_create_layer( x_isaac, y_isaac, "Instances", obj_menu_pause);
+		//cria o menu
+		instance_create_layer( global.x_isaac, global.y_isaac, "Instances", obj_menu_pause);
+		//cria os botões
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_resumo);
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_salvar);
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_configuracao);
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_sair);
+		
     }
     else
     {
         // Se estiver despausando, reativa todos os objetos
         instance_activate_all();
 		instance_destroy(obj_menu_pause);
+		instance_destroy(obj_botao_resumo);
+		instance_destroy(obj_botao_salvar);
+		instance_destroy(obj_botao_configuracao);
+		instance_destroy(obj_botao_sair);
     }
 }

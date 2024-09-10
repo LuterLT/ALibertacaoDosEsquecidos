@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_salvar",
-  "spriteId": null,
+  "name": "obj_botao_resumo",
+  "spriteId": {
+    "name": "spr_botao_resumo",
+    "path": "sprites/spr_botao_resumo/spr_botao_resumo.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -22,12 +25,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "pause",
-    "path": "folders/Objetos/pause.yy",
+    "name": "menu",
+    "path": "folders/Objetos/menu.yy",
   },
 }

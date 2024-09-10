@@ -1,0 +1,1 @@
+draw_sprite(spr_botao_sair, 0, x, y + 40);
