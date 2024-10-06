@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_botao_sair",
   "spriteId": {
-    "name": "spr_botao_sair",
-    "path": "sprites/spr_botao_sair/spr_botao_sair.yy",
+    "name": "spr_botaoMenu_sair",
+    "path": "sprites/spr_botaoMenu_sair/spr_botaoMenu_sair.yy",
   },
   "solid": false,
   "visible": true,

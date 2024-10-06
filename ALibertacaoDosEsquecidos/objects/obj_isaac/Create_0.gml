@@ -1,4 +1,11 @@
 
+if (global.verificar_salvo)
+{
+	x = global.x_isaac;
+	y = global.y_isaac;
+}
+
+
 veloh = 0;
 velov= 0;
 movendo = 0;

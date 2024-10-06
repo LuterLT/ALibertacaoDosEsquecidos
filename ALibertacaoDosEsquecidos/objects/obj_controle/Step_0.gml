@@ -13,9 +13,9 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
 		//cria o menu
 		instance_create_layer( global.x_isaac, global.y_isaac, "Instances", obj_menu_pause);
 		//cria os botões
-		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_resumo);
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_voltar);
 		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_salvar);
-		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_configuracao);
+		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_opcoes);
 		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_sair);
 		
     }
@@ -24,9 +24,9 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
         // Se estiver despausando, reativa todos os objetos
         instance_activate_all();
 		instance_destroy(obj_menu_pause);
-		instance_destroy(obj_botao_resumo);
+		instance_destroy(obj_botao_voltar);
 		instance_destroy(obj_botao_salvar);
-		instance_destroy(obj_botao_configuracao);
+		instance_destroy(obj_botao_opcoes);
 		instance_destroy(obj_botao_sair);
     }
 }

@@ -1,5 +1,4 @@
 
-
 var _dir = keyboard_check(ord("D"));
 var _esq = keyboard_check(ord("A"));
 var _up = keyboard_check(ord("W"));

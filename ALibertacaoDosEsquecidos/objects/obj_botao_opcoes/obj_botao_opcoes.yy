@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_menu_pause",
+  "name": "obj_botao_opcoes",
   "spriteId": {
-    "name": "spr_quadro_de_botoes",
-    "path": "sprites/spr_quadro_de_botoes/spr_quadro_de_botoes.yy",
+    "name": "spr_botaoMenu_opcoes",
+    "path": "sprites/spr_botaoMenu_opcoes/spr_botaoMenu_opcoes.yy",
   },
   "solid": false,
   "visible": true,

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_botao_salvar",
   "spriteId": {
-    "name": "spr_botao_salvar",
-    "path": "sprites/spr_botao_salvar/spr_botao_salvar.yy",
+    "name": "spr_botaoMenu_salvar",
+    "path": "sprites/spr_botaoMenu_salvar/spr_botaoMenu_salvar.yy",
   },
   "solid": false,
   "visible": true,
