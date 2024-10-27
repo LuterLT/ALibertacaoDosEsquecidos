@@ -1,2 +1,2 @@
-draw_sprite(spr_botaoMenu_salvar, 0, x, y - 10);
+draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, image_blend, 1);
 

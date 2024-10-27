@@ -13,10 +13,10 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
 		//cria o menu
 		instance_create_layer( global.x_isaac, global.y_isaac, "Instances", obj_menu_pause);
 		//cria os botões
-		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_voltar);
+		instance_create_layer( global.x_isaac, global.y_isaac - 30, "GUI", obj_botao_voltar);
 		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_salvar);
-		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_opcoes);
-		instance_create_layer( global.x_isaac, global.y_isaac, "GUI", obj_botao_sair);
+		instance_create_layer( global.x_isaac, global.y_isaac + 30, "GUI", obj_botao_opcoes);
+		instance_create_layer( global.x_isaac, global.y_isaac + 60, "GUI", obj_botao_sair);
 		
     }
     else
