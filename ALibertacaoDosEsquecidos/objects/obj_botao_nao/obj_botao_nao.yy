@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_botao_sair",
+  "name": "obj_botao_nao",
   "spriteId": {
-    "name": "spr_botaoMenu_sair",
-    "path": "sprites/spr_botaoMenu_sair/spr_botaoMenu_sair.yy",
+    "name": "spr_botaoMenu_nao",
+    "path": "sprites/spr_botaoMenu_nao/spr_botaoMenu_nao.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,6 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":6,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":6,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

@@ -23,10 +23,6 @@ if (keyboard_check_pressed(vk_escape)) // Detecta quando a tecla ESC é pression
     {
         // Se estiver despausando, reativa todos os objetos
         instance_activate_all();
-		instance_destroy(obj_menu_pause);
-		instance_destroy(obj_botao_voltar);
-		instance_destroy(obj_botao_salvar);
-		instance_destroy(obj_botao_opcoes);
-		instance_destroy(obj_botao_sair);
+		scr_destruir_menu();
     }
 }
