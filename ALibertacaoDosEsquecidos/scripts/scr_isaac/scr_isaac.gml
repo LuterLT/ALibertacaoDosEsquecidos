@@ -81,6 +81,7 @@ function scr_isaac_movimentacao()
 
 }
 
+
 function scr_isaac_atacando()
 {
 	if (image_index >= 1)
