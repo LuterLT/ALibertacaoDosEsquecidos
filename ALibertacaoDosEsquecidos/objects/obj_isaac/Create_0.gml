@@ -1,3 +1,4 @@
+global.deseja_sair = false;
 
 if (global.verificar_salvo)
 {
@@ -24,7 +25,7 @@ sprites[1][0] = spr_isaac_andando_frente_strip8;
 sprites[1][1] = spr_isaac_andando_costas_strip8;
 sprites[1][2] = spr_isaac_andando_esq_strip8;
 sprites[1][3] = spr_isaac_andando_dir_strip8;
-//sprites atacando
+//sprites atacando coisa inutil
 sprites[2][0] = spr_isaac_atacando_faca_frente_strip8;
 sprites[2][1] = spr_isaac_atacando_faca_costas_strip8;
 sprites[2][2] = spr_isaac_atacando_faca_esq_strip8;
