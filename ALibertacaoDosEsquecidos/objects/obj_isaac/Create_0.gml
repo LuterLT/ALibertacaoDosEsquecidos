@@ -12,6 +12,8 @@ velov= 0;
 estado = scr_isaac_movimentacao; 
 estadoSpr = 0;
 lado = 0;
+movendo = false;
+batalhando = false;
 #endregion
 
 #region Spites
