@@ -129,8 +129,8 @@ if (batalhando == false)
 	var _up = keyboard_check(ord("W"));
 	var _down = keyboard_check(ord("S"));
 
-	veloh = (_dir - _esq) * 1;
-	velov = (_down - _up) * 1;
+	veloh = (_dir - _esq) * 2;
+	velov = (_down - _up) * 2;
 	
 		x += veloh;
 		y += velov;
@@ -153,16 +153,16 @@ if (batalhando == false)
 		switch direcao
 		{
 			default:
-				sprite_index = spr_isaac_correndo_dir;
+				sprite_index = spr_isaac_correndo_dir_strip6;
 			break;
 			case 1:
-				sprite_index = spr_isaac_correndo_costas;
+				sprite_index = spr_isaac_correndo_costas_strip6;
 			break;
 			case 2:
-				sprite_index = spr_isaac_correndo_esq;
+				sprite_index = spr_isaac_correndo_esq_strip6;
 			break;
 			case 3:
-				sprite_index = spr_isaac_correndo_frente;
+				sprite_index = spr_isaac_correndo_frente_strip6;
 			break;
 		}
 	}
@@ -171,16 +171,16 @@ if (batalhando == false)
 		switch direcao
 		{
 			default:
-				sprite_index = spr_isaac_paradoBatalha_dir;
+				sprite_index = spr_isaac_respirando_dir;
 			break;
 			case 1:
-				sprite_index = spr_isaac_paradoBatlaha_costas;
+				sprite_index = spr_isaac_respirando_costas;
 			break;
 			case 2:
-				sprite_index = spr_isaac_paradoBatalha_esq;
+				sprite_index = spr_isaac_respirando_esq;
 			break;
 			case 3:
-				sprite_index = spr_isaac_paradoBatalha_frente;
+				sprite_index = spr_isaac_respirando_frente;
 			break;
 		}
 	}
@@ -190,19 +190,19 @@ if (batalhando == false)
 	if mouse_check_button_pressed(mb_left)
 	{
 		image_index = 0;
-		switch lado
+		switch direcao
 		{
-			case 0:
-				sprite_index =  spr_isaac_atacandoBata_faca_dir;
+			default:
+				sprite_index =  spr_isaac_atacando_faca_dir_strip8;
 			break;
 			case 1:
-				sprite_index = spr_isaac_atacandoBata_faca_costas;
+				sprite_index = spr_isaac_atacando_faca_costas_strip8;
 			break;
 			case 2:
-				sprite_index = spr_isaac_atacandoBata_faca_esq;
+				sprite_index = spr_isaac_atacando_faca_esq_strip8;
 			break;
 			case 3:
-				sprite_index = spr_isaac_atacandoBata_faca_frente;
+				sprite_index = spr_isaac_atacando_faca_frente_strip8;
 			break;
 		}
 		estado = scr_isaac_batalhando_ataque;
@@ -215,14 +215,18 @@ if (batalhando == false)
 
 function scr_isaac_batalhando_ataque()
 {
+	if (direcao == 0 && estado == scr_isaac_batalhando_ataque) { // Se está olhando para a direita
+    sprite_index = spr_isaac_atacando_faca_dir_strip8;
+	}
+
 	if (image_index >= 1)
 	{
 		if (atacar == false)
 		{
-			switch lado
+			switch direcao
 			{
 				default:
-					instance_create_layer(x, y + 6, "Instances", obj_isaac_hitbox);
+					instance_create_layer(x + 6, y, "Instances", obj_isaac_hitbox);
 				break;
 				case 1:
 					instance_create_layer(x, y - 6, "Instances", obj_isaac_hitbox);
@@ -231,7 +235,7 @@ function scr_isaac_batalhando_ataque()
 					instance_create_layer(x - 6, y, "Instances", obj_isaac_hitbox);
 				break;
 				case 3:
-					instance_create_layer(x + 6, y, "Instances", obj_isaac_hitbox);
+					instance_create_layer(x, y + 8, "Instances", obj_isaac_hitbox);
 				break;
 			}
 		
@@ -242,6 +246,7 @@ function scr_isaac_batalhando_ataque()
 		{
 			estado = scr_isaac_batalhando;
 			atacar = false;
+			image_index = 0;
 		}
 	}
 }

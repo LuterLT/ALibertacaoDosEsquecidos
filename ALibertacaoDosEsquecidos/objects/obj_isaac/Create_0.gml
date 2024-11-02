@@ -1,3 +1,4 @@
+
 global.deseja_sair = false;
 
 if (global.verificar_salvo)
@@ -12,8 +13,9 @@ velov= 0;
 estado = scr_isaac_movimentacao; 
 estadoSpr = 0;
 lado = 0;
+direcao = 0;
 movendo = false;
-batalhando = false;
+batalhando = true;
 #endregion
 
 #region Spites
