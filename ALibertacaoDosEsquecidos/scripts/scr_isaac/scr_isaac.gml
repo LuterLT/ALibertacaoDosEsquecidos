@@ -118,10 +118,12 @@ function scr_isaac_atacando()
 
 function scr_isaac_batalhando()
 {
-if (batalhando == false)
-{
-	estado = scr_isaac_movimentacao;
-}
+	if (batalhando == false)
+	{
+		estado = scr_isaac_movimentacao;
+	}
+
+	scr_aplicar_zoom_batalha();
 
 #region Andar
 	var _dir = keyboard_check(ord("D"));
@@ -227,15 +229,19 @@ function scr_isaac_batalhando_ataque()
 			{
 				default:
 					instance_create_layer(x + 6, y, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 180;
 				break;
 				case 1:
 					instance_create_layer(x, y - 6, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 270;
 				break;
 				case 2:
 					instance_create_layer(x - 6, y, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 360; 
 				break;
 				case 3:
-					instance_create_layer(x, y + 8, "Instances", obj_isaac_hitbox);
+					instance_create_layer(x, y + 6, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 90;
 				break;
 			}
 		

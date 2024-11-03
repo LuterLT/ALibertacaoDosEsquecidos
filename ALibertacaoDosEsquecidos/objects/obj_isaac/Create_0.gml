@@ -7,6 +7,8 @@ if (global.verificar_salvo)
 	y = global.y_isaac;
 }
 
+instance_create_layer(x, y + 8, "Instances", obj_isaac_sombra);
+
 #region Movimentação
 veloh = 0;
 velov= 0;

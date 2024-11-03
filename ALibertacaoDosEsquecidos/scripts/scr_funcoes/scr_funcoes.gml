@@ -22,3 +22,25 @@ function scr_pegar_centroTela()
 	global.center_x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) / 2;
 	global.center_y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) / 2;
 }
+
+function scr_aplicar_zoom_batalha() 
+{
+	// Definindo os valores do zoom
+	var zoom_final = 1.2;  // Fator de zoom desejado (1.2x)
+	var duracao = 30;      // Duração do zoom em steps
+
+	// Inicializando os tamanhos originais da câmera uma vez (se não estiver definido)
+	if (!variable_global_exists("original_camera_width")) {
+	    global.original_camera_width = camera_get_view_width(view_camera[0]);
+	    global.original_camera_height = camera_get_view_height(view_camera[0]);
+	}
+
+	// Aplicando zoom suave
+	var target_width = global.original_camera_width / zoom_final;
+	var target_height = global.original_camera_height / zoom_final;
+
+	camera_set_view_size(view_camera[0], lerp(camera_get_view_width(view_camera[0]), target_width, 1 / duracao), lerp(camera_get_view_height(view_camera[0]), target_height, 1 / duracao));
+	
+	instance_create_layer(obj_isaac.x, obj_isaac.y, "Instances", obj_escurecimento);
+
+}
