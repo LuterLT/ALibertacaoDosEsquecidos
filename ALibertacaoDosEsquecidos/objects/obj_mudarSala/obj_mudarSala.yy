@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_escurecimento",
+  "name": "obj_mudarSala",
   "spriteId": {
-    "name": "spr_borda_vinheta__1_",
-    "path": "sprites/spr_borda_vinheta__1_/spr_borda_vinheta__1_.yy",
+    "name": "spr_opcoes",
+    "path": "sprites/spr_opcoes/spr_opcoes.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,13 +25,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "controle",
-    "path": "folders/Objetos/controle.yy",
+    "name": "menu",
+    "path": "folders/Objetos/menu.yy",
   },
 }

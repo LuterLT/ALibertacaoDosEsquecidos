@@ -123,7 +123,6 @@ function scr_isaac_batalhando()
 		estado = scr_isaac_movimentacao;
 	}
 
-	scr_aplicar_zoom_batalha();
 
 #region Andar
 	var _dir = keyboard_check(ord("D"));

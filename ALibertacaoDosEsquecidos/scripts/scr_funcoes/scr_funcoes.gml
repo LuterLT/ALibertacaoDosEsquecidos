@@ -23,24 +23,16 @@ function scr_pegar_centroTela()
 	global.center_y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) / 2;
 }
 
-function scr_aplicar_zoom_batalha() 
+
+function scr_centralizar_camera()
 {
-	// Definindo os valores do zoom
-	var zoom_final = 1.2;  // Fator de zoom desejado (1.2x)
-	var duracao = 30;      // Duração do zoom em steps
+	// Suponha que o personagem seja "obj_personagem"
 
-	// Inicializando os tamanhos originais da câmera uma vez (se não estiver definido)
-	if (!variable_global_exists("original_camera_width")) {
-	    global.original_camera_width = camera_get_view_width(view_camera[0]);
-	    global.original_camera_height = camera_get_view_height(view_camera[0]);
-	}
+	// Define o alvo (centro da câmera) como a posição do personagem
+	var centro_x = obj_isaac.x;
+	var centro_y = obj_isaac.y;
 
-	// Aplicando zoom suave
-	var target_width = global.original_camera_width / zoom_final;
-	var target_height = global.original_camera_height / zoom_final;
-
-	camera_set_view_size(view_camera[0], lerp(camera_get_view_width(view_camera[0]), target_width, 1 / duracao), lerp(camera_get_view_height(view_camera[0]), target_height, 1 / duracao));
-	
-	instance_create_layer(obj_isaac.x, obj_isaac.y, "Instances", obj_escurecimento);
+	//Calcula a posição da câmera com base no centro da tela
+	camera_set_view_pos(view_camera[0], centro_x - camera_get_view_width(view_camera[0]) / 2, centro_y - camera_get_view_height(view_camera[0]) / 2);
 
 }

@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_escurecimento",
-  "spriteId": {
-    "name": "spr_borda_vinheta__1_",
-    "path": "sprites/spr_borda_vinheta__1_/spr_borda_vinheta__1_.yy",
-  },
+  "name": "obj_cameraTrue",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -26,7 +23,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
