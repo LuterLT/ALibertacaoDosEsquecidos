@@ -93,15 +93,19 @@ function scr_isaac_atacando()
 			{
 				default:
 					instance_create_layer(x, y + 6, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 90;
 				break;
 				case 1:
 					instance_create_layer(x, y - 6, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 270;
 				break;
 				case 2:
 					instance_create_layer(x - 6, y, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 360; 
 				break;
 				case 3:
 					instance_create_layer(x + 6, y, "Instances", obj_isaac_hitbox);
+					obj_isaac_hitbox.image_angle = 180;
 				break;
 			}
 		
