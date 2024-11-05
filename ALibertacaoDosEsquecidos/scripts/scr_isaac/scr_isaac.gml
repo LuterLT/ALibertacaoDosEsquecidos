@@ -23,6 +23,11 @@ function scr_isaac_colisao()
 
 function scr_isaac_movimentacao()
 {
+	if(instance_exists(obj_escurecimento))
+	{
+		instance_destroy(obj_escurecimento);
+	}
+	
 		// Movimentação
 	var _dir = keyboard_check(ord("D"));
 	var _esq = keyboard_check(ord("A"));
@@ -122,7 +127,11 @@ function scr_isaac_batalhando()
 	{
 		estado = scr_isaac_movimentacao;
 	}
-
+	
+	if(instance_exists(obj_escurecimento) == false)
+	{
+		instance_create_layer(x,y,"Instances",obj_escurecimento);
+	}
 
 #region Andar
 	var _dir = keyboard_check(ord("D"));

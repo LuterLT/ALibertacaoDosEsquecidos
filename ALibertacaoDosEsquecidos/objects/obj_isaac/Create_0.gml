@@ -17,7 +17,7 @@ estadoSpr = 0;
 lado = 0;
 direcao = 0;
 movendo = false;
-batalhando = true;
+batalhando = false;
 #endregion
 
 #region Spites

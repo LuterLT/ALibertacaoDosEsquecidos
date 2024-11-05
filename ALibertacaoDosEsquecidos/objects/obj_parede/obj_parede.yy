@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_mudarSala",
-  "spriteId": {
-    "name": "spr_opcoes",
-    "path": "sprites/spr_opcoes/spr_opcoes.yy",
-  },
+  "name": "obj_parede",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,9 +21,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
