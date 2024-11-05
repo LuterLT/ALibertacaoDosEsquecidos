@@ -1,24 +1,4 @@
 
-function scr_isaac_colisao()
-{
-    // Verifica colisão no eixo horizontal
-    if place_meeting(x + veloh, y, obj_parede) {
-        while !place_meeting(x + sign(veloh), y, obj_parede) {
-            x += sign(veloh);
-        }
-        veloh = 0;
-    }
-    // Verifica colisão no eixo vertical
-    if place_meeting(x, y + velov, obj_parede) {
-        while !place_meeting(x, y + sign(velov), obj_parede) {
-            y += sign(velov);
-        }
-        velov = 0;
-    }
-    // Atualiza posição final
-    x += veloh;
-    y += velov;
-}
 
 
 function scr_isaac_movimentacao()
@@ -34,12 +14,28 @@ function scr_isaac_movimentacao()
 	var _up = keyboard_check(ord("W"));
 	var _down = keyboard_check(ord("S"));
 
-	veloh = (_dir - _esq) * 1;
-	velov = (_down - _up) * 1;
-	//scr_isaac_colisao();
+	var velocidade = 1;
+
+	veloh = (_dir - _esq) * velocidade;
+	velov = (_down - _up) * velocidade;
 	
-	x += veloh;
-	y += velov;
+	// Movimento com colisão no eixo horizontal
+	if (veloh != 0) {
+	    if (!place_meeting(x + veloh, y, obj_parede)) {
+	        x += veloh;
+	    } else {
+	        veloh = 0; // Para movimento horizontal em colisão
+	    }
+	}
+
+	// Movimento com colisão no eixo vertical
+	if (velov != 0) {
+	    if (!place_meeting(x, y + velov, obj_parede)) {
+	        y += velov;
+	    } else {
+	        velov = 0; // Para movimento vertical em colisão
+	    }
+	}
 
 	// Define o estado de movimento
 	if (veloh != 0 or velov != 0) {
@@ -139,11 +135,30 @@ function scr_isaac_batalhando()
 	var _up = keyboard_check(ord("W"));
 	var _down = keyboard_check(ord("S"));
 
-	veloh = (_dir - _esq) * 2;
-	velov = (_down - _up) * 2;
+	var velocidade = 2;
+
+	veloh = (_dir - _esq) * velocidade;
+	velov = (_down - _up) * velocidade;
+
 	
-		x += veloh;
-		y += velov;
+	// Movimento com colisão no eixo horizontal
+	if (veloh != 0) {
+	    if (!place_meeting(x + veloh, y, obj_parede)) {
+	        x += veloh;
+	    } else {
+	        veloh = 0; // Para movimento horizontal em colisão
+	    }
+	}
+
+	// Movimento com colisão no eixo vertical
+	if (velov != 0) {
+	    if (!place_meeting(x, y + velov, obj_parede)) {
+	        y += velov;
+	    } else {
+	        velov = 0; // Para movimento vertical em colisão
+	    }
+	}
+	
 		
 	direcao = floor((point_direction(x, y, mouse_x, mouse_y)+45)/90);
 	
