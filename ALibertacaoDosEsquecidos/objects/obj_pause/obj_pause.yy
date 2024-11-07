@@ -30,7 +30,12 @@
   ],
   "overriddenProperties": [],
   "parent": {
+<<<<<<< Updated upstream:ALibertacaoDosEsquecidos/objects/obj_pause/obj_pause.yy
     "name": "pause",
     "path": "folders/Objetos/pause.yy",
+=======
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
+>>>>>>> Stashed changes:ALibertacaoDosEsquecidos/objects/obj_isaac_hitbox/obj_isaac_hitbox.yy
   },
 }
