@@ -25,17 +25,6 @@ if inventario == true
 			draw_sprite_ext(spr_inventario_selecionado, 0, _slotsx, _slotsy,escala, escala, 0, c_white, 1);
 		}
 		
-		if grid_itens[# Infos.Item, i] != -1
-		{
-			draw_sprite_ext(spr_itens, grid_itens[# 0, i], _slotsx, _slotsy, escala, escala, 0, c_white, 1);
-			
-			draw_set_font(fonte);			
-			draw_set_halign(fa_center);
-			
-		}
-		
-		
-		
 		ix++;
 		if ix >= slots_h
 		{
