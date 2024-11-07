@@ -16,6 +16,6 @@ else
 		ini_write_real("JogadorBasic", "y_atual", global.y_isaac);
 		ini_write_real("JogadorBasic", "room", room);
 	
-	ini_close()
+	ini_close();
 	show_message("jogo salvo!");
 }

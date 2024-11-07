@@ -1,1 +1,0 @@
-scr_centralizar_camera();

@@ -1,13 +1,9 @@
 
-global.deseja_sair = false;
-
 if (global.verificar_salvo)
 {
 	x = global.x_isaac;
 	y = global.y_isaac;
 }
-
-instance_create_layer(x, y + 8, "Instances", obj_isaac_sombra);
 
 #region Movimentação
 veloh = 0;
@@ -15,9 +11,6 @@ velov= 0;
 estado = scr_isaac_movimentacao; 
 estadoSpr = 0;
 lado = 0;
-direcao = 0;
-movendo = false;
-batalhando = false;
 #endregion
 
 #region Spites
@@ -31,7 +24,7 @@ sprites[1][0] = spr_isaac_andando_frente_strip8;
 sprites[1][1] = spr_isaac_andando_costas_strip8;
 sprites[1][2] = spr_isaac_andando_esq_strip8;
 sprites[1][3] = spr_isaac_andando_dir_strip8;
-//sprites atacando coisa inutil
+//sprites atacando
 sprites[2][0] = spr_isaac_atacando_faca_frente_strip8;
 sprites[2][1] = spr_isaac_atacando_faca_costas_strip8;
 sprites[2][2] = spr_isaac_atacando_faca_esq_strip8;
