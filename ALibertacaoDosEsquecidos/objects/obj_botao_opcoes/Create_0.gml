@@ -1,0 +1,4 @@
+entrou_mouse = false;
+
+
+
