@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_isaac_andando_frente_strip8",
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,

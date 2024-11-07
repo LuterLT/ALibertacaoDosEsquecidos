@@ -1,1 +1,1 @@
-draw_self();
+draw_sprite(spr_botaoMenu_sair, 0, x, y + 50);

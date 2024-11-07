@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Isaac",
-    "path": "folders/Objetos/Isaac.yy",
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
   },
 }
