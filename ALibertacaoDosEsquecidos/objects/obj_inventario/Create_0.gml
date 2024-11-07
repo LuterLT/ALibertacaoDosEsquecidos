@@ -13,6 +13,9 @@ buffer = 4 * escala;
 inventario_l = sprite_get_width(spr_inventario_itens) * escala;
 inventario_a = sprite_get_height(spr_inventario_itens) * escala;
 
+item_selecionado = -1;
+pos_selecionada = -1;
+
 enum Infos
 {
 	Item, Quantidade, Altura
@@ -38,6 +41,6 @@ grid_itens[# Infos.Quantidade, 1] = 3;
 grid_itens[# Infos.Item, 2] = Itens.Capacete;
 grid_itens[# Infos.Quantidade, 2] = 2;
 
-grid_itens[# Infos.Item, 4] = Itens.Banana;
-grid_itens[# Infos.Quantidade, 4] = 9;
+grid_itens[# Infos.Item, 4] = Itens.Maca;
+grid_itens[# Infos.Quantidade, 4] = 999;
 
