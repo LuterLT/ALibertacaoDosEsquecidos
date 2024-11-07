@@ -36,3 +36,23 @@ function scr_centralizar_camera()
 	camera_set_view_pos(view_camera[0], centro_x - camera_get_view_width(view_camera[0]) / 2, centro_y - camera_get_view_height(view_camera[0]) / 2);
 
 }
+
+function draw_text_outline(x, y, text, text_color, outline_color, outline_thickness) 
+{
+
+    draw_set_color(outline_color);
+    
+    for (var i = -outline_thickness; i <= outline_thickness; i++) 
+	{
+        for (var j = -outline_thickness; j <= outline_thickness; j++) 
+		{
+            if (i != 0 || j != 0) 
+			{
+                draw_text(x + i, y + j, text);
+            }
+        }
+    }
+    
+    draw_set_color(text_color);
+    draw_text(x, y, text);
+}

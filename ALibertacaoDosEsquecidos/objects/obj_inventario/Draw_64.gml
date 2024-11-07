@@ -26,11 +26,11 @@ if inventario == true
 		
 		if grid_itens[# Infos.Item, i] != -1
 		{
-			draw_sprite_ext(spr_itens, grid_itens[# 0, i], _slotsx, _slotsy, escala, escala, 0, c_white, 1);
+			draw_sprite_ext(spr_itens, grid_itens[# Infos.Item, i], _slotsx, _slotsy, escala, escala, 0, c_white, 1);
 			
 			draw_set_font(fonte);		
 			draw_set_halign(fa_center);
-			
+			draw_text_outline(_slotsx + tamanho_slots, _slotsy + tamanho_slots - 8, grid_itens[# Infos.Quantidade, i], c_white, c_black, 3);
 		}		
 		
 		ix++;
