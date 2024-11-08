@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_isaac_hitbox",
+  "name": "obj_policiaolBaitola",
   "spriteId": {
-    "name": "spr_isaac_hitbox",
-    "path": "sprites/spr_isaac_hitbox/spr_isaac_hitbox.yy",
+    "name": "spr_policial_baitola_parado_frente",
+    "path": "sprites/spr_policial_baitola_parado_frente/spr_policial_baitola_parado_frente.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,15 +26,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_policiaolBaitola","path":"objects/obj_policiaolBaitola/obj_policiaolBaitola.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Isaac",
-    "path": "folders/Objetos/Isaac.yy",
+    "name": "inimigos",
+    "path": "folders/Objetos/inimigos.yy",
   },
 }
