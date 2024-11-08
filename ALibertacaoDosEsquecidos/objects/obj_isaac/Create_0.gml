@@ -1,4 +1,4 @@
-
+global.tirarZoom = true;
 global.deseja_sair = false;
 
 if (global.verificar_salvo)

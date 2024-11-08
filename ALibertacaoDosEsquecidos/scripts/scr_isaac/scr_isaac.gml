@@ -3,9 +3,10 @@
 
 function scr_isaac_movimentacao()
 {
-	if(instance_exists(obj_escurecimento))
+	if (instance_exists(obj_escurecimento))
 	{
 		instance_destroy(obj_escurecimento);
+		global.tirarZoom = 3;
 	}
 	
 		// Movimentação
@@ -127,117 +128,120 @@ function scr_isaac_batalhando()
 	{
 		estado = scr_isaac_movimentacao;
 	}
-	
-	if(instance_exists(obj_escurecimento) == false)
+	else
 	{
-		instance_create_layer(x,y,"Instances",obj_escurecimento);
-	}
+			if(instance_exists(obj_escurecimento) == false)
+			{
+				global.tirarZoom = false;
+				instance_create_layer(x,y,"Instances",obj_escurecimento);
+			}
 
-#region Andar
-	var _dir = keyboard_check(ord("D"));
-	var _esq = keyboard_check(ord("A"));
-	var _up = keyboard_check(ord("W"));
-	var _down = keyboard_check(ord("S"));
+		#region Andar
+			var _dir = keyboard_check(ord("D"));
+			var _esq = keyboard_check(ord("A"));
+			var _up = keyboard_check(ord("W"));
+			var _down = keyboard_check(ord("S"));
 
-	var velocidade = 2;
+			var velocidade = 2;
 
-	veloh = (_dir - _esq) * velocidade;
-	velov = (_down - _up) * velocidade;
+			veloh = (_dir - _esq) * velocidade;
+			velov = (_down - _up) * velocidade;
 
 	
-	// Movimento com colisão no eixo horizontal
-	if (veloh != 0) {
-	    if (!place_meeting(x + veloh, y, obj_parede)) {
-	        x += veloh;
-	    } else {
-	        veloh = 0; // Para movimento horizontal em colisão
-	    }
-	}
+			// Movimento com colisão no eixo horizontal
+			if (veloh != 0) {
+			    if (!place_meeting(x + veloh, y, obj_parede)) {
+			        x += veloh;
+			    } else {
+			        veloh = 0; // Para movimento horizontal em colisão
+			    }
+			}
 
-	// Movimento com colisão no eixo vertical
-	if (velov != 0) {
-	    if (!place_meeting(x, y + velov, obj_parede)) {
-	        y += velov;
-	    } else {
-	        velov = 0; // Para movimento vertical em colisão
-	    }
-	}
+			// Movimento com colisão no eixo vertical
+			if (velov != 0) {
+			    if (!place_meeting(x, y + velov, obj_parede)) {
+			        y += velov;
+			    } else {
+			        velov = 0; // Para movimento vertical em colisão
+			    }
+			}
 	
 		
-	direcao = floor((point_direction(x, y, mouse_x, mouse_y)+45)/90);
+			direcao = floor((point_direction(x, y, mouse_x, mouse_y)+45)/90);
 	
-	if (veloh != 0 or velov != 0)
-	{
-		movendo = true;
-	}
-	else
-	{
-		movendo = false;
-	}
+			if (veloh != 0 or velov != 0)
+			{
+				movendo = true;
+			}
+			else
+			{
+				movendo = false;
+			}
 	
 	
 	
-	if (movendo == true)
-	{
-		switch direcao
-		{
-			default:
-				sprite_index = spr_isaac_correndo_dir_strip6;
-			break;
-			case 1:
-				sprite_index = spr_isaac_correndo_costas_strip6;
-			break;
-			case 2:
-				sprite_index = spr_isaac_correndo_esq_strip6;
-			break;
-			case 3:
-				sprite_index = spr_isaac_correndo_frente_strip6;
-			break;
-		}
-	}
-	else
-	{
-		switch direcao
-		{
-			default:
-				sprite_index = spr_isaac_respirando_dir;
-			break;
-			case 1:
-				sprite_index = spr_isaac_respirando_costas;
-			break;
-			case 2:
-				sprite_index = spr_isaac_respirando_esq;
-			break;
-			case 3:
-				sprite_index = spr_isaac_respirando_frente;
-			break;
-		}
-	}
-#endregion
+			if (movendo == true)
+			{
+				switch direcao
+				{
+					default:
+						sprite_index = spr_isaac_correndo_dir_strip6;
+					break;
+					case 1:
+						sprite_index = spr_isaac_correndo_costas_strip6;
+					break;
+					case 2:
+						sprite_index = spr_isaac_correndo_esq_strip6;
+					break;
+					case 3:
+						sprite_index = spr_isaac_correndo_frente_strip6;
+					break;
+				}
+			}
+			else
+			{
+				switch direcao
+				{
+					default:
+						sprite_index = spr_isaac_respirando_dir;
+					break;
+					case 1:
+						sprite_index = spr_isaac_respirando_costas;
+					break;
+					case 2:
+						sprite_index = spr_isaac_respirando_esq;
+					break;
+					case 3:
+						sprite_index = spr_isaac_respirando_frente;
+					break;
+				}
+			}
+		#endregion
 
-#region Verificar Ataque
-	if mouse_check_button_pressed(mb_left)
-	{
-		image_index = 0;
-		switch direcao
-		{
-			default:
-				sprite_index =  spr_isaac_atacando_faca_dir_strip8;
-			break;
-			case 1:
-				sprite_index = spr_isaac_atacando_faca_costas_strip8;
-			break;
-			case 2:
-				sprite_index = spr_isaac_atacando_faca_esq_strip8;
-			break;
-			case 3:
-				sprite_index = spr_isaac_atacando_faca_frente_strip8;
-			break;
-		}
-		estado = scr_isaac_batalhando_ataque;
-	}
-#endregion
+		#region Verificar Ataque
+			if mouse_check_button_pressed(mb_left)
+			{
+				image_index = 0;
+				switch direcao
+				{
+					default:
+						sprite_index =  spr_isaac_atacando_faca_dir_strip8;
+					break;
+					case 1:
+						sprite_index = spr_isaac_atacando_faca_costas_strip8;
+					break;
+					case 2:
+						sprite_index = spr_isaac_atacando_faca_esq_strip8;
+					break;
+					case 3:
+						sprite_index = spr_isaac_atacando_faca_frente_strip8;
+					break;
+				}
+				estado = scr_isaac_batalhando_ataque;
+			}
+		#endregion
 
+	}
 		
 }
 

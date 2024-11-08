@@ -8,7 +8,11 @@ function scr_slime_checar_personagem(){
 	{
 		estado = scr_slime_perseguindo;
 	}
-	
+	else
+	{
+		obj_isaac.batalhando = false;
+		obj_isaac.estado = scr_isaac_movimentacao;
+	}
 }
 
 
@@ -17,7 +21,7 @@ function scr_slime_colisao(){
 	{
         while !place_meeting(x + sign(hveloc), y, obj_parede) 
 		{
-            x += sign(vveloc);
+            x += sign(hveloc);
         }
         hveloc = 0;
     }
@@ -36,6 +40,7 @@ function scr_slime_colisao(){
 function scr_slime_escolher_estado(){
 	
 	scr_slime_checar_personagem();
+
 	proximo_estado = choose(scr_slime_andando, scr_slime_parada);
 	
 	if (proximo_estado == scr_slime_andando){
@@ -52,6 +57,7 @@ function scr_slime_escolher_estado(){
 function scr_slime_andando(){
 	
 	scr_slime_checar_personagem();
+
 	
 	if (distance_to_point(dest_x, dest_y) > veloc)
 	{
@@ -74,10 +80,13 @@ function scr_slime_andando(){
 function scr_slime_parada(){
 	
 	scr_slime_checar_personagem();
+
 	image_speed = 0.5;
 }
 
 function scr_slime_perseguindo(){
+	
+	obj_isaac.batalhando = true;
 	
 	if (estado != scr_slime_hit)
 	{
@@ -105,7 +114,6 @@ function scr_slime_perseguindo(){
 function scr_slime_hit()
 {
 	empurrar_veloc = lerp(empurrar_veloc, 0, 0.2);
-	
 	hveloc = lengthdir_x(empurrar_veloc, empurrar_dir);
 	vveloc = lengthdir_y(empurrar_veloc, empurrar_dir);
 	scr_slime_colisao();
