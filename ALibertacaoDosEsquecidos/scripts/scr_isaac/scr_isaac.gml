@@ -132,8 +132,8 @@ function scr_isaac_batalhando()
 	{
 			if(instance_exists(obj_escurecimento) == false)
 			{
-				global.tirarZoom = false;
-				instance_create_layer(x,y,"Instances",obj_escurecimento);
+				//global.tirarZoom = false;
+				//instance_create_layer(x,y,"Instances",obj_escurecimento);
 			}
 
 		#region Andar
