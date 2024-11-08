@@ -1,6 +1,3 @@
-global.policialbatalhando = false;
-global.slimebatalhando = false;
-
 global.tirarZoom = true;
 global.deseja_sair = false;
 

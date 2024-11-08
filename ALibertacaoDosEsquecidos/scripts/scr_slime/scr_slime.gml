@@ -7,17 +7,11 @@ function scr_slime_checar_personagem(){
 	if (distance_to_object(obj_isaac) <= 50)
 	{
 		estado = scr_slime_perseguindo;
-		global.slimebatalhando = true;
 	}
 	else
 	{
-		global.slimebatalhando = false;
-		if (global.policialbatalhando == true)
-		{}
-		else{
 		obj_isaac.batalhando = false;
 		obj_isaac.estado = scr_isaac_movimentacao;
-		}
 	}
 }
 
