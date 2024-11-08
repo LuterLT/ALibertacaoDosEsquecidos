@@ -11,7 +11,7 @@ else
 {
 	global.x_isaac = 0;
 	global.y_isaac = 0;
-}}
+}
 
 global.tirarZoom = 0;
 largura_final = 480;
