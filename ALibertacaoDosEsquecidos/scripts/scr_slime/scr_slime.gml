@@ -79,22 +79,37 @@ function scr_slime_parada(){
 
 function scr_slime_perseguindo(){
 	
-	image_speed = 1.5;
-	dest_x = obj_isaac.x;
-	dest_y = obj_isaac.y;
+	if (estado != scr_slime_hit)
+	{
+		image_speed = 1.5;
+		dest_x = obj_isaac.x;
+		dest_y = obj_isaac.y;
 	
-	var _dir = point_direction(x, y, dest_x, dest_y);
-	hveloc = lengthdir_x(veloc_persegue, _dir);
-	vveloc = lengthdir_y(veloc_persegue, _dir);
+		var _dir = point_direction(x, y, dest_x, dest_y);
+		hveloc = lengthdir_x(veloc_persegue, _dir);
+		vveloc = lengthdir_y(veloc_persegue, _dir);
 	
+		scr_slime_colisao();
+		x += hveloc;
+		y += vveloc;
+	
+		if(distance_to_object(obj_isaac) >= dist_desaggro)
+		{
+			estado = scr_slime_escolher_estado;
+			alarm[0] = irandom_range(120, 200);
+		}
+	}
+
+}
+
+function scr_slime_hit()
+{
+	empurrar_veloc = lerp(empurrar_veloc, 0, 0.2);
+	
+	hveloc = lengthdir_x(empurrar_veloc, empurrar_dir);
+	vveloc = lengthdir_y(empurrar_veloc, empurrar_dir);
 	scr_slime_colisao();
 	x += hveloc;
 	y += vveloc;
 	
-	if(distance_to_object(obj_isaac) >= dist_desaggro)
-	{
-		estado = scr_slime_escolher_estado;
-		alarm[0] = irandom_range(120, 200);
-	}
-
 }
