@@ -17,6 +17,6 @@ draw_sprite_ext(spr_hud_barra_estatisticas, 0, 75, _huda, _escala, _escala, 0, c
 
 draw_sprite_ext(spr_hud_barra_vida, 0, 75, _huda, (_vida / _maxvida) * _escala, _escala, 0, c_white, 1);
 
-draw_sprite_ext(spr_hud_barra_estamina, 0, 75, _huda + 54, (_estamina / _maxestamnia) * _escala, _escala, 0, c_white, 1);
+draw_sprite_ext(spr_hud_barra_estamina, 0, 75, _huda + 56, (_estamina / _maxestamnia) * _escala, _escala, 0, c_white, 1);
 
 draw_sprite_ext(spr_hud_barra_mana, 0, 75, _huda + 112, (_mana / _maxmana) * _escala, _escala, 0, c_white, 1);
