@@ -83,6 +83,7 @@
     {"id":{"name":"spr_botao_equipar","path":"sprites/spr_botao_equipar/spr_botao_equipar.yy",},"order":0,},
     {"id":{"name":"spr_botao_inventario","path":"sprites/spr_botao_inventario/spr_botao_inventario.yy",},"order":3,},
     {"id":{"name":"spr_isaac_hitbox","path":"sprites/spr_isaac_hitbox/spr_isaac_hitbox.yy",},"order":4,},
+    {"id":{"name":"obj_dano","path":"objects/obj_dano/obj_dano.yy",},"order":11,},
     {"id":{"name":"spr_hud_barra_slim","path":"sprites/spr_hud_barra_slim/spr_hud_barra_slim.yy",},"order":3,},
     {"id":{"name":"obj_sair_pergunta","path":"objects/obj_sair_pergunta/obj_sair_pergunta.yy",},"order":7,},
     {"id":{"name":"obj_quadro_desejaSair","path":"objects/obj_quadro_desejaSair/obj_quadro_desejaSair.yy",},"order":8,},

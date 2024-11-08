@@ -6,3 +6,4 @@ other.empurrar_veloc = 10;
 other.estado = scr_slime_hit;
 other.alarm[1] = 5;
 other.hit = true;
+
