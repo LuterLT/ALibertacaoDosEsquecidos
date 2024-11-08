@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_parede",
+  "name": "obj_barra_de_ferro",
   "spriteId": {
-    "name": "spr_cor",
-    "path": "sprites/spr_cor/spr_cor.yy",
+    "name": "spr_barra_de_ferro",
+    "path": "sprites/spr_barra_de_ferro/spr_barra_de_ferro.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -24,13 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "galpao",
+    "path": "folders/Objetos/lugares/galpao.yy",
   },
 }

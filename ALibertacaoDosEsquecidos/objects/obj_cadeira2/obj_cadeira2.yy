@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_parede",
+  "name": "obj_cadeira2",
   "spriteId": {
-    "name": "spr_cor",
-    "path": "sprites/spr_cor/spr_cor.yy",
+    "name": "spr_cadeira2",
+    "path": "sprites/spr_cadeira2/spr_cadeira2.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -24,13 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "galpao",
+    "path": "folders/Objetos/lugares/galpao.yy",
   },
 }
