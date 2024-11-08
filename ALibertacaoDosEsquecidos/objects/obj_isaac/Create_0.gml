@@ -43,3 +43,14 @@ sprites[2][3] = spr_isaac_atacando_faca_dir_strip8;
 dano = 1;
 atacar = false; //vai servir como um switch para quando criar a hitbox
 #endregion
+
+//Vida e Estamina
+
+max_estamina = 100;
+estamina = max_estamina;
+max_vida = 15;
+vida = max_vida;
+mana = 15;
+max_mana = mana;
+
+tomardano = true;
